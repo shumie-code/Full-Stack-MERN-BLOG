@@ -1,13 +1,13 @@
 {
   "name": "my-blog-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend for blog application running in a Docker image deployed on AWS",
+  "main": "server.js",
   "scripts": {
     "start": "npx nodemon --exec npx babel-node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Petros Shumie",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -19,5 +19,21 @@
     "@babel/core": "^7.8.4",
     "@babel/node": "^7.8.4",
     "@babel/preset-env": "^7.8.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shumie-code/Full-Stack-MERN-BLOG.git"
+  },
+  "keywords": [
+    "AWS",
+    "DOCKER",
+    "NODE",
+    "REACT",
+    "JAVASCRIPT",
+    "CLOUD"
+  ],
+  "bugs": {
+    "url": "https://github.com/shumie-code/Full-Stack-MERN-BLOG/issues"
+  },
+  "homepage": "https://github.com/shumie-code/Full-Stack-MERN-BLOG#readme"
 }
