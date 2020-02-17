@@ -55,13 +55,21 @@ app.post("/api/articles/:name/upvote", async (req, res) => {
     res.status(200).json(updatedArticleInfo);
   }, res);
 });
+app.post('/api/articles/:name/add-comment', (req, res) => {
+    const { username, text } = req.body;
+    const articleName = req.params.name;
 
-app.post("/api/articles/:name/add-comment", (req, res) => {
-  const { username, text } = req.body;
-  const articleName = req.params.name;
+    withDB(async (db) => {
+        const articlesInfo = await db.collection('articles').findOne({ name: articleName });
+        await db.collection('articles').updateOne({ name: articleName }, {
+            '$set': {
+                comments: articlesInfo.comments.concat({ username, text }),
+            },
+        });
+        const updatedArticleInfo = await db.collection('articles').findOne({ name: articleName });
 
-  articlesInfo[articleName].comments.push({ username, text });
-  res.status(200).send(articlesInfo[articleName]);
+        res.status(200).json(updatedArticleInfo);
+    }, res);
 });
 
 app.listen(8000, () => console.log("Listening on port 8000"));
