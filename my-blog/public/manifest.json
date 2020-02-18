@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Full-Stack",
+  "name": "Full-Stck, a blog hosted in docker",
   "icons": [
     {
       "src": "favicon.ico",
