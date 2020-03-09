@@ -8,7 +8,7 @@ The blog is to be hosted in a Docker Container, which will then be deployed onli
 
 As of this moment it is still a work in progress.
 
-Technologies used inclode: 
+Technologies used include: 
 React JS for the frontend framework, all component interactions are delegated by React JS. 
 Express for server-side routing and page optimization for rendering.
 NodeJS as the JavaScript runtime the backend is hosted on.
